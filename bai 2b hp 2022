@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+#define suy ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define endl "\n"
+using namespace std;
+bool sosanh(string a , string b){
+	return (a + b) > (b + a);
+}
+int main(){
+	suy;
+	int n; cin >> n;
+	vector<int> a;
+	for (int i = 1 ; i <= n ; i++ ){
+		int x; cin >> x;
+		a.push_back(x);
+	}
+	vector<string> snum;
+	for (int num : a){
+		snum.push_back(to_string(num));
+	}
+	sort(snum.begin(), snum.end() , sosanh);
+	string sn = "";
+	for (string s : snum){
+		sn += s;
+	}
+	cout << sn << endl;
+	return 0;
+}
