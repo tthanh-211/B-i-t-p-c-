@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+#define suy ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+#define ll long long 
+#define endl "\n"
+
+using namespace std;
+int main(){
+	suy;
+	string s;
+	getline(cin ,s);
+	ll dem = 0;
+	for ( char c : s ){
+		if (isdigit(c) ) dem++ ;
+	}
+	cout << dem << endl;
+	return 0;
+}
